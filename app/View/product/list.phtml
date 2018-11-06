@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Teste | Listando Produto</title>
+<link href="http://<?php echo $_SERVER['SERVER_NAME'];?>/test/public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://<?php echo $_SERVER['SERVER_NAME'];?>/test/public/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+<link href="http://<?php echo $_SERVER['SERVER_NAME'];?>/test/public/bootstrap/css/test.css" rel="stylesheet">
+
+</head>
+<body>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="container">
+    <h2 class="sub-header">Listagem de produtos</h2>
+    <div class="table-responsive">
+    <form action="#product-list">
+        <table id="product-list" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>Registrar Novo Produto</th>
+                    <th><input id="name_New" type="text" name="name" required /></th>
+                    <th><input id="price_New" class="maskPrice" type="number" min="0" step="0.00" name="price" required /></th>
+                    <th><button id="gravarNew" type="button" onclick="saveNew();"; class="btn btn-info">Gravar</button></th>
+                </tr>
+            </tfoot>
+            <tbody id="product-content">
+            </tbody>
+        </table>
+        </form>
+    </div>
+</div>
+</div>
+<script src="http://<?php echo $_SERVER['SERVER_NAME'];?>/test/public/jquery/jquery-3.3.1.min.js"></script>
+<script src="http://<?php echo $_SERVER['SERVER_NAME'];?>/test/public/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://<?php echo $_SERVER['SERVER_NAME'];?>/test/public/function.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+    reloadTable();
+//]]>
+</script>
+</body>
+</html>
